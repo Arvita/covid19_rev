@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2020 at 07:54 AM
+-- Generation Time: Apr 05, 2020 at 06:27 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `data` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `status` varchar(200) NOT NULL,
   `update_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,7 +42,7 @@ CREATE TABLE `data` (
 
 CREATE TABLE `history` (
   `kode` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `kode_question` int(11) NOT NULL,
   `status` varchar(200) NOT NULL,
   `update_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -56,7 +56,7 @@ CREATE TABLE `history` (
 
 CREATE TABLE `question` (
   `kode` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `q1` int(11) NOT NULL,
   `q2` int(11) NOT NULL,
   `q3` int(11) NOT NULL,
